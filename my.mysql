@@ -1,0 +1,18 @@
+create database Prit;
+use Prit;
+CREATE TABLE prit_marksheet (
+    subject_id INT PRIMARY KEY,
+    subject VARCHAR(50),
+    marks INT,
+    exam_date DATE
+);
+INSERT INTO prit_marksheet (subject_id, subject, marks, exam_date) VALUES
+(1, 'EG',   101, '2025-05-12'),
+(2, 'EP',   102, '2025-05-13'),
+(3, 'OOPC', 103, '2025-05-14'),
+(4, 'EC',   104, '2025-07-15'),
+(5, 'IICT', 105, '2025-07-16'),
+(6, 'M1',   107, '2025-07-17');
+SELECT * FROM prit_marksheet;
+SELECT * FROM prit_marksheet WHERE marks > 102;
+SELECT * FROM prit_marksheet WHERE subject = 'EG' OR marks = 107;
